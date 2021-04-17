@@ -1,0 +1,4 @@
+pandas~=1.1.4
+requests~=2.25.0
+pycountry~=20.7.3
+Flask~=1.1.2
