@@ -66,7 +66,7 @@ def loggedIn():
             geoip_data = simple_geoip.get_geoip_data()
             country = geoip_data['location']['country']
 
-            country = 'PT'  # isto e so debug
+            # country = 'PT'  # isto e so debug
 
             infoCountry = pycountry.countries.get(alpha_2=country)
             infoCalls = dictOfCountrys[infoCountry.name]
