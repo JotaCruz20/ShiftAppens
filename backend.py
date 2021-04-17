@@ -2,6 +2,7 @@ from flask import Flask, render_template, request, redirect, session
 import json
 import requests
 from urllib.parse import quote
+import sys
 
 app = Flask(__name__)
 app.debug = True
@@ -38,9 +39,61 @@ auth_query_parameters = {
     "client_id": CLIENT_ID
 }
 
-
 allPosts = [{'title': 'Post 1', 'content': 'First Post', 'author': 'Me', 'id': 0},
-            {'title': 'Post 2', 'content':  'Second Post', 'id':1}]
+            {'title': 'Post 2', 'content': 'Second Post', 'id': 1}]
+
+'''
+playlist_id = response.json()['id']
+endpoint_url = f"https://api.spotify.com/v1/playlists/{playlist_id}/tracks"
+
+request_body = json.dumps({
+          "uris" : uris
+        })
+response = requests.post(url = endpoint_url, data = request_body, headers={"Content-Type":"application/json", 
+                        "Authorization":"Bearer YOUR_TOKEN_HERE"})
+
+print(response.status_code)
+'''
+
+
+def add_to_playlist(response, uris):
+    playlist_id = response.json()['id']
+    request_body = json.dumps({
+        "uris": uris
+    })
+
+    authorization_header = {"Accept": "application/json", "Content-Type": "application/json",
+                            "Authorization": "Bearer {}".format(session['access_token'])}
+
+    new_track_endpoint = f"https://api.spotify.com/v1/playlists/{playlist_id}/tracks"
+
+    response = requests.post(new_track_endpoint, data=request_body, headers=authorization_header)
+    print(response.status_code)
+
+
+def algorithm(playlist_data, duration):
+    # get favourites
+    # get time and add to playlist
+    authorization_header = {"Accept": "application/json", "Content-Type": "application/json",
+                            "Authorization": "Bearer {}".format(session['access_token'])}
+
+    vec = []
+
+    artist_api_endpoist = "https://api.spotify.com/v1/me/top/tracks"
+    response = requests.get(artist_api_endpoist, headers=authorization_header)
+    print(response.status_code)
+    if response.status_code == 200:
+        print(response.json())
+        for track in response.json()['items']:
+            duration = int(duration) - int(track['duration_ms'])
+            if duration >= 0:
+                vec.append(track)
+    else:
+        print('error')
+
+    print(vec)
+    return
+
 
 @app.route('/')
 def hello_world():
@@ -69,7 +122,6 @@ def delete(id):
     return redirect('/posts')
 
 
-
 @app.route('/posts/edit/<int:id>', methods=['GET', 'POST'])
 def edit(id):
     global allPosts
@@ -90,29 +142,40 @@ def index():
     auth_url = "{}/?{}".format(SPOTIFY_AUTH_URL, url_args)
     return redirect(auth_url)
 
-@app.route("/playlist")
-def generate_playlist():
+
+@app.route("/create/<playlist_name>/<duration>")  # o html faz put -> change
+def generate_playlist(playlist_name, duration):
+    # ?name=<playlist_name>&duration=<playlist_duration>
+    # auth_token = request.args['duration']
+    # auth_token = request.args['playlist_name']
+
+    # creates empty playlist
+    request_body = json.dumps({
+        'name': playlist_name,
+        'description': 'Your new playlist created with love by SpotTheTime ❤',
+        'public': False
+    })
 
     authorization_header = {"Accept": "application/json", "Content-Type": "application/json",
                             "Authorization": "Bearer {}".format(session['access_token'])}
 
-    # Get profile data
-    # user_profile_api_endpoint = "{}/me".format(SPOTIFY_API_URL)
-    # profile_response = requests.get(user_profile_api_endpoint, headers=authorization_header)
+    new_playlist_endpoint = f"https://api.spotify.com/v1/users/{session['display_arr'][0]['id']}/playlists"
+    print(new_playlist_endpoint)
+    new_playlist = requests.post(new_playlist_endpoint, data=request_body, headers=authorization_header)
+    new_playlist_data = new_playlist.json()
 
-    artist_api_endpoist = "https://api.spotify.com/v1/me/top/artists"
-    artist = requests.get(artist_api_endpoist, headers=authorization_header)
-    artist_data = artist.json()
-    print(artist_data)
-    # Auth Step 1: Authorization
-    return render_template("indexSpotify.html", sorted_array=display_arr)
+    algorithm(new_playlist_data, duration)
+
+    return render_template("indexSpotify.html")
 
 
+# autorização
 @app.route("/callback/q")
 def callback():
     # Auth Step 4: Requests refresh and access tokens
     auth_token = request.args['code']
     session['auth_token'] = auth_token
+    print(session['auth_token'])
     code_payload = {
         "grant_type": "authorization_code",
         "code": str(auth_token),
@@ -129,6 +192,7 @@ def callback():
     token_type = response_data["token_type"]
     expires_in = response_data["expires_in"]
     session['access_token'] = access_token
+    print(session['access_token'])
 
     # Auth Step 6: Use the access token to access Spotify API
     authorization_header = {"Authorization": "Bearer {}".format(access_token)}
@@ -138,16 +202,15 @@ def callback():
     profile_response = requests.get(user_profile_api_endpoint, headers=authorization_header)
     profile_data = json.loads(profile_response.text)
 
-
-    # Get user playlist data
     playlist_api_endpoint = "{}/playlists".format(profile_data["href"])
     playlists_response = requests.get(playlist_api_endpoint, headers=authorization_header)
     playlist_data = json.loads(playlists_response.text)
 
-
     # Combine profile and playlist data to display
-    display_arr = [profile_data] + playlist_data["items"] + [{"token": auth_token}]
-    return render_template("indexSpotify.html", sorted_array=display_arr)
+    session['display_arr'] = [profile_data] + playlist_data["items"]
+    print(session['display_arr'])
+    '''+ [{"token": auth_token}]'''
+    return render_template("indexSpotify.html", sorted_array=session['display_arr'])
 
 
 if __name__ == '__main__':

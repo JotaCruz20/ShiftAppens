@@ -1,0 +1,43 @@
+{% extends 'base.html' %}
+{% block head %}
+<title>Home</title>
+{% endblock %}
+{% block nav %}
+{% endblock %}
+
+{% block body %}
+<br>
+<div class="bg-light p-5 rounded" style="text-align: center">
+    <div class="col-sm-8 mx-auto">
+        <h2>Insert the time for the playlist:</h2>
+        <form action="/loggedIn" method="POST">
+            Time: <input class="col-xs-4" style="width: 10%" type="number" min="0" max="24" name="hour" id="hour" placeholder="hour"
+                             aria-label="hour">
+            <small>:</small>
+            <input class="col-xs-4" type="number" style="width: 10%" name="mins" min="0" max="60" id="mins" placeholder="mins"
+                             aria-label="mins">
+
+            <br>
+            <br>
+            <input type="submit" value="Search" class="btn btn-primary">
+        </form>
+    </div>
+</div>
+
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+
+
+
+{% endblock %}
