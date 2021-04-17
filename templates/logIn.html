@@ -2,25 +2,99 @@
 {% block head %}
 <title>Home</title>
 {% endblock %}
-{% block nav %}
-{% endblock %}
 
 {% block body %}
 <br>
-<div class="bg-light p-5 rounded" style="text-align: center">
-    <div class="col-sm-8 mx-auto">
-        <h2>Insert the time for the playlist:</h2>
-        <form action="/loggedIn" method="POST">
-            Time: <input class="col-xs-4" style="width: 10%" type="number" min="0" max="24" name="hour" id="hour" placeholder="hour"
-                             aria-label="hour">
-            <small>:</small>
-            <input class="col-xs-4" type="number" style="width: 10%" name="mins" min="0" max="60" id="mins" placeholder="mins"
-                             aria-label="mins">
+<div id="loading"></div>
+<div id="content">
+    <div class="bg p-5 rounded" style="text-align: center">
+        <div style=" padding: 5px -10px -10px 5px;border:2px solid #021a40;border-radius: 25px">
+            <br>
+            <div class="col-sm-8 mx-auto">
+                <h2>Emotional valence:</h2>
+                <form action="/loggedIn" method="POST">
+                    <div class="slidecontainer">
+                        <div class="inline" style="display: inline-block">Unpleasant</div>
+                        <input type="range" name="emotion" min="-5" max="5" value="0" class="slider" id="myRange">
+                        <div class="inline" style="display: inline-block">Pleasant</div>
+                    </div>
+                    <span>Value:</span>
+                    <span id="f" style="font-weight:bold;">0</span>
+                    <script>
+                        var slideSq = document.getElementById("myRange");
+                        var y = document.getElementById("f");
+                        y.innerHTML = slideSq.value;
+                        slideSq.oninput = function () {
+                            y.innerHTML = this.value;
+                        }
+                    </script>
+                    <br>
+                    <small>Ask yourself how well you feel right now - do you feel good, does it feel good to be in your
+                        shoes
+                        right now?</small>
 
+
+                    <br>
+                    <br>
+                    <br>
+                     <br>
+                    <br>
+                    <br>
+
+                    <h2>How much energy do you feel:</h2>
+                    <div class="slidecontainer">
+                        <div class="inline" style="display: inline-block;margin-left: 53px">Dull</div>
+                        <input type="range" name="energy" min="-5" max="5" value="0" class="slider" id="myRange2">
+                        <div class="inline" style="display: inline-block">Energetic</div>
+                    </div>
+                    <span>Value:</span>
+                    <span id="f2" style="font-weight:bold;">0</span>
+                    <script>
+                        var slideSq2 = document.getElementById("myRange2");
+                        var y2 = document.getElementById("f2");
+                        y2.innerHTML = slideSq2.value;
+                        slideSq2.oninput = function () {
+                            y2.innerHTML = this.value;
+                        }
+
+                    </script>
+                    <br>
+                    <small>If you had to do some physical activity, that involved say running or using strength, how
+                        would
+                        that
+                        feel?</small>
+                    <br>
+                    <br>
+                    <br>
+                     <br>
+                    <br>
+                    <br>
+
+
+                    <h2>How do you feel about living?</h2>
+                    <br>
+                    <select class="custom-select my-1 mr-sm-2" id="inlineFormCustomSelectPref" name="life">
+                        <option value="1" selected>I hate living</option>
+                        <option value="2">I often think about how life would be if I was dead</option>
+                        <option value="3">I live one day at a time</option>
+                        <option value="4">I look forward to my future</option>
+                        <option value="5">I love my present and can't wait for the future</option>
+                    </select>
+
+                    <br>
+
+                    <script type="text/javascript">// <![CDATA[
+                    function loading() {
+                        $("#loading").show();
+                        $("#content").hide();
+                    }
+
+                    // ]]></script>
+                    <input type="submit" value="Search" class="btn btn-primary" onclick="loading();">
+                </form>
+            </div>
             <br>
-            <br>
-            <input type="submit" value="Search" class="btn btn-primary">
-        </form>
+        </div>
     </div>
 </div>
 
@@ -37,7 +111,18 @@
 <br>
 <br>
 <br>
-
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
 
 
 {% endblock %}

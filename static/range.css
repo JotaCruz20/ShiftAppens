@@ -1,0 +1,58 @@
+.slider {
+    -webkit-appearance: none;
+    width: 35%;
+    height: 15px;
+    border-radius: 5px;
+    background: #d3d3d3;
+    outline: none;
+    opacity: 0.7;
+    -webkit-transition: .2s;
+    transition: opacity .2s;
+}
+
+.slider::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    background: #247BA0;
+    cursor: pointer;
+}
+
+.slider::-moz-range-thumb {
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    background: #247BA0;
+    cursor: pointer;
+}
+
+.btn-primary,.btn-primary:hover,.btn-primary:active, .btn-primary:visited{
+    background-color: #1A86C3;
+    border: #1A86C3;
+}
+
+.btn-warning,.btn-warning:hover,.btn-warning:active, .btn-warning:visited{
+    background-color: #125E88;
+    border: #125E88;
+}
+
+.btn-info,.btn-info:hover,.btn-info:active, .btn-info:visited{
+    background-color: #57C7FF;
+    border: #57C7FF;
+}
+
+
+
+div#loading {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin: -95px 0px 0px -95px;
+    width: 500px;
+    height: 500px;
+    display: none;
+    background: url(../static/assets/loading.gif) no-repeat;
+    cursor: wait;
+}

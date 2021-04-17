@@ -1,21 +1,120 @@
 {% extends 'base.html' %}
 {% block head %}
-    <title>Home</title>
+<title>Home</title>
 {% endblock %}
+
 {% block body %}
-    <br>
-    <h1>Home Page</h1>
-    <br>
-     <div>
-      <div class="bg-light p-5 rounded">
-        <div class="col-sm-8 mx-auto">
-          <h1>Welcome to the Blog</h1>
-          <p>Check out our posts here</p>
-          <p>
-            <a class="btn btn-primary" href="/spotify" role="button">Posts &raquo;</a>
-          </p>
-        </div>
-      </div>
+<br>
+<div class="bg p-5 rounded" style="text-align: center;">
+    <div class="col-sm-8 mx-auto">
+        <img src="../static/assets/Imagem1.png" width=50% height=50% alt="logo">
+        <br>
+        <br>
+        <h1>Login</h1>
+        <p>Please login with your spotify account, so we can make your day better</p>
+        <p>
+            <a class="btn btn-primary" href="/spotify" role="button">Login &raquo;</a>
+            <a class="btn btn-warning" target="_blank" style="color: white" href="https://www.spotify.com/us/signup/" role="button">Register
+                &raquo;</a>
+             <a class="btn btn-info" href="#about" style="color: white"role="button">About Dr.Music
+                &raquo;</a>
+
+
+        </p>
+        <p>
+            <small style="color: gray;">We will only use your info to create a personalized spotify playlist</small>
+        </p>
     </div>
-  </div>
+
+    <br>
+    <br>
+    <br>
+
+    <div class="row" style="position: absolute;left: 1%;right: 5%">
+        <div class="col">
+            <img alt="Clock" style="width: 90px;height: 90px;float:left;margin-left:170px;margin-right: 50px"
+                 data-v-60186292="" src="../static/assets/spotify_edited.svg">
+            <br>
+            <p>Link your spotify account so we can create your playlist</p>
+        </div>
+        <div class="col">
+            <img alt="Clock" style="width: 90px;height: 90px;float:left;margin-left:170px;margin-right: 50px"
+                 data-v-60186292="" src="../static/assets/microphone.svg">
+            <br>
+            <pl>We can create playlists with podcasts or music</pl>
+        </div>
+        <div class="w-100"></div>
+        <br>
+        <br>
+        <div class="col"><img alt="Clock"
+                              style="width: 90px;height: 90px;float:left;margin-left:170px;margin-right: 50px"
+                              data-v-60186292="" src="../static/assets/clock_edited.svg">
+            <br>
+            <p>Playlists with the time you have</p></div>
+        <div class="col"><img alt="Clock"
+                              style="width: 90px;height: 90px;float:left;margin-left:170px;margin-right: 50px"
+                              data-v-60186292="" src="../static/assets/saude-mental_edited.svg">
+            <br>
+            <p>We will create a playlist based on your current mental state</p></div>
+    </div>
+</div>
+
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<div id="about">
+    <h2>About Dr.Music</h2>
+    <br>
+    <p>Nowadays, with the pandemic we are facing, more and more people are feeling lonely and depressed, and this
+        greatly affects their mental health. A Harvard Medical School study concluded that music therapy can help
+        people by evoking emotional responses in order to relax, stimulate, or help them heal. In this way, music
+        enables you to:
+        <br>
+        -Calm stress
+        <br>
+        -Reduce pain
+        <br>
+        -Improve cognitive performance
+        <br>
+        -Be a source of entertainment at the most exhausting moments
+        <br>
+
+        With this problem in mind, Dr. Music, through a questionnaire and an Artificial Intelligence algorithm,
+        makes an evaluation of the user and creates a playlist on Spotify that will contain, depending on what the
+        user prefers at the moment
+        <br>
+        Calm and appropriate music to his mood
+        Podcast(s) of help
+    </p>
+</div>
+
+
+</div>
+<br>
+<br>
+<br>
+
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br><br>
+<br>
+
 {% endblock %}
