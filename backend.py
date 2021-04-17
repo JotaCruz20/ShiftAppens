@@ -1,8 +1,10 @@
+import random
+
 from flask import Flask, render_template, request, redirect, session
 import json
 import requests
 from urllib.parse import quote
-import sys
+import pickle
 
 app = Flask(__name__)
 app.debug = True
@@ -28,7 +30,6 @@ SCOPE = "playlist-modify-public playlist-modify-private user-top-read"
 STATE = ""
 SHOW_DIALOG_bool = True
 SHOW_DIALOG_str = str(SHOW_DIALOG_bool).lower()
-auth_token = ""
 
 auth_query_parameters = {
     "response_type": "code",
@@ -39,25 +40,20 @@ auth_query_parameters = {
     "client_id": CLIENT_ID
 }
 
+MOOD = ['Energetic', 'Depressed', 'Sad', 'Calm', 'Happy', 'Contentment', 'Frantic', 'Exuberant']
+
 allPosts = [{'title': 'Post 1', 'content': 'First Post', 'author': 'Me', 'id': 0},
             {'title': 'Post 2', 'content': 'Second Post', 'id': 1}]
 
-'''
-playlist_id = response.json()['id']
-endpoint_url = f"https://api.spotify.com/v1/playlists/{playlist_id}/tracks"
-
-request_body = json.dumps({
-          "uris" : uris
-        })
-response = requests.post(url = endpoint_url, data = request_body, headers={"Content-Type":"application/json", 
-                        "Authorization":"Bearer YOUR_TOKEN_HERE"})
-
-print(response.status_code)
-'''
+# Load the data - No need to do Feature Engineering again
+with open('MOODAI.pickle', 'rb') as fe_data_file:
+    feature_engineered_data = pickle.load(fe_data_file)
 
 
-def add_to_playlist(response, uris):
-    playlist_id = response.json()['id']
+# Continue with your modeling
+
+# done
+def add_to_playlist(playlist_id, uris):
     request_body = json.dumps({
         "uris": uris
     })
@@ -68,71 +64,99 @@ def add_to_playlist(response, uris):
     new_track_endpoint = f"https://api.spotify.com/v1/playlists/{playlist_id}/tracks"
 
     response = requests.post(new_track_endpoint, data=request_body, headers=authorization_header)
-    print(response.status_code)
+    return response.status_code
 
 
-def algorithm(playlist_data, duration):
-    # get favourites
-    # get time and add to playlist
+def music_algorithm(playlist_data, duration, genres, moods):  # fazer verificação da era;
+    playlist = []
+    artists = []
+    vec = []
     authorization_header = {"Accept": "application/json", "Content-Type": "application/json",
                             "Authorization": "Bearer {}".format(session['access_token'])}
 
-    vec = []
+    # get favourites
+    artists_api_endpoint = "https://api.spotify.com/v1/me/top/artists"
+    artists_response = requests.get(artists_api_endpoint, headers=authorization_header)
+    if artists_response.status_code != 200:
+        return artists_response.status_code
+    artists_data = artists_response.json()['items']
 
-    artist_api_endpoist = "https://api.spotify.com/v1/me/top/tracks"
-    response = requests.get(artist_api_endpoist, headers=authorization_header)
-    print(response.status_code)
-    if response.status_code == 200:
-        print(response.json())
-        for track in response.json()['items']:
-            duration = int(duration) - int(track['duration_ms'])
-            if duration >= 0:
-                vec.append(track)
-    else:
-        print('error')
+    tracks_api_endpoint = "https://api.spotify.com/v1/me/top/tracks"
+    tracks_response = requests.get(tracks_api_endpoint, headers=authorization_header)
+    if tracks_response.status_code != 200:
+        return artists_response.status_code
+    tracks_data = tracks_response.json()['items']
 
-    print(vec)
+    for artist in artists_data:
+        for genre in genres:
+            if genre in artist['genres'] and artists not in artists:
+                artists.append(artist)
+                continue
+
+    for track in tracks_data:
+        for artist in artists:
+            if artist['name'] == track['album']['artists'][0]['name']:
+                playlist.append(track)
+                continue
+
+    seed_api_endpoint = "https://api.spotify.com/v1/recommendations?limit=100&market=ES"
+
+    seed_api_endpoint = seed_api_endpoint + '&seed_genres='
+    for count, genre in enumerate(genres):
+        if count > 0:
+            seed_api_endpoint = seed_api_endpoint + '2C'
+        seed_api_endpoint = seed_api_endpoint + f'{genre}%'
+    seed_api_endpoint = seed_api_endpoint[:-1]  # remove last
+
+    if len(playlist) != 0:
+        seed_api_endpoint = seed_api_endpoint + '&seed_tracks='
+        for count, track in enumerate(playlist):
+            name = track['id']
+            if count > 0:
+                seed_api_endpoint = seed_api_endpoint + '2C'
+            seed_api_endpoint = seed_api_endpoint + f'{name}%'
+        seed_api_endpoint = seed_api_endpoint[:-1]  # remove last
+
+    seed_response = requests.get(seed_api_endpoint, headers=authorization_header)
+    if seed_response.status_code != 200:
+        return seed_response.status_code
+    seed_data = seed_response.json()
+    for track in seed_data['tracks']:
+        if track not in playlist:
+            playlist.append(track)
+
+    for track in playlist:
+        # IA feature_engineered_data nome, artista, id, danceability, energy,
+        # feature_engineered_data.predict()
+
+        duration_aux = int(duration) - int(track['duration_ms'])
+        if duration_aux >= 0:
+            features_api_endpoint = f"https://api.spotify.com/v1/audio-features/{track['id']}"
+            features_response = requests.get(features_api_endpoint, headers=authorization_header)
+            if features_response.status_code != 200:
+                return features_response.status_code
+            features_data = features_response.json()
+            index = int(feature_engineered_data.predict(
+                [[features_data['danceability'], features_data['loudness'], features_data['speechiness'],
+                 features_data['acousticness'], features_data['liveness']]]))
+
+            # test if right mood
+            if MOOD[index] in moods:
+                vec.append(track['uri'])
+                duration = duration_aux
+
+    random.shuffle(vec)
+
+    return add_to_playlist(playlist_data['id'], vec)
+
+
+def podcast_algorithm(playlist_data, duration, genres):
     return
 
 
 @app.route('/')
 def hello_world():
     return render_template('index.html')
-
-
-@app.route('/posts', methods=['GET', 'POST'])
-def posts():
-    global counter
-    if request.method == 'POST':
-        post_title = request.form['title']
-        post_content = request.form['content']
-        post_author = request.form['author']
-        allPosts.append({'title': post_title, 'content': post_content, 'author': post_author, 'id': counter})
-        counter += 1
-        return redirect('/posts')
-    else:
-        return render_template('posts.html', posts=allPosts)
-
-
-@app.route('/posts/delete/<int:id>')
-def delete(id):
-    global allPosts
-    print(id)
-    allPosts.pop(id)
-    return redirect('/posts')
-
-
-@app.route('/posts/edit/<int:id>', methods=['GET', 'POST'])
-def edit(id):
-    global allPosts
-    post = allPosts[id]
-    if request.method == 'POST':
-        post['title'] = request.form['title']
-        post['content'] = request.form['content']
-        post['author'] = request.form['author']
-        return redirect('/posts')
-    else:
-        return render_template('edit.html', post=post)
 
 
 @app.route("/spotify")
@@ -145,10 +169,6 @@ def index():
 
 @app.route("/create/<playlist_name>/<duration>")  # o html faz put -> change
 def generate_playlist(playlist_name, duration):
-    # ?name=<playlist_name>&duration=<playlist_duration>
-    # auth_token = request.args['duration']
-    # auth_token = request.args['playlist_name']
-
     # creates empty playlist
     request_body = json.dumps({
         'name': playlist_name,
@@ -160,11 +180,10 @@ def generate_playlist(playlist_name, duration):
                             "Authorization": "Bearer {}".format(session['access_token'])}
 
     new_playlist_endpoint = f"https://api.spotify.com/v1/users/{session['display_arr'][0]['id']}/playlists"
-    print(new_playlist_endpoint)
     new_playlist = requests.post(new_playlist_endpoint, data=request_body, headers=authorization_header)
     new_playlist_data = new_playlist.json()
 
-    algorithm(new_playlist_data, duration)
+    music_algorithm(new_playlist_data, duration, ['electropop'], ['Sad', 'Depressed']) # DEBUG
 
     return render_template("indexSpotify.html")
 
@@ -175,7 +194,6 @@ def callback():
     # Auth Step 4: Requests refresh and access tokens
     auth_token = request.args['code']
     session['auth_token'] = auth_token
-    print(session['auth_token'])
     code_payload = {
         "grant_type": "authorization_code",
         "code": str(auth_token),
@@ -192,7 +210,6 @@ def callback():
     token_type = response_data["token_type"]
     expires_in = response_data["expires_in"]
     session['access_token'] = access_token
-    print(session['access_token'])
 
     # Auth Step 6: Use the access token to access Spotify API
     authorization_header = {"Authorization": "Bearer {}".format(access_token)}
@@ -208,8 +225,6 @@ def callback():
 
     # Combine profile and playlist data to display
     session['display_arr'] = [profile_data] + playlist_data["items"]
-    print(session['display_arr'])
-    '''+ [{"token": auth_token}]'''
     return render_template("indexSpotify.html", sorted_array=session['display_arr'])
 
 

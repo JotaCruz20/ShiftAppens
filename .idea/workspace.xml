@@ -2,11 +2,23 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="883fe539-9211-4e0e-88e3-2016edaa9d16" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/frontend.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/assets/clock.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/footer.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/logIn.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/podcasts.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/css/main.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/base.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/edit.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/indexSpotify.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/posts.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/ShiftAppens.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/ShiftAppens.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MOODAI.pickle" beforeDir="false" afterPath="$PROJECT_DIR$/MOODAI.pickle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend.py" beforeDir="false" afterPath="$PROJECT_DIR$/backend.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/notebook.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/notebook.ipynb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/assets/clock.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/footer.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/logIn.html" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -25,7 +37,7 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="JupyterTrust" id="9298c3b7-10ca-4e78-988a-3eb1ba9f81a6" />
+  <component name="JupyterTrust" id="bbb7d2b8-e68f-466e-87ae-d009ef3e71cd" />
   <component name="ProjectId" id="1rGA0ZncjNE1RNfMtMOsDHSBKto" />
   <component name="ProjectLevelVcsManager">
     <ConfirmationsSetting value="2" id="Add" />
@@ -41,6 +53,13 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/static/assets" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.detected.package.tslint" value="true" />
+    <property name="node.js.path.for.package.eslint" value="project" />
+    <property name="node.js.path.for.package.tslint" value="project" />
+    <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="node.js.selected.package.tslint" value="(autodetect)" />
+    <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
@@ -50,7 +69,29 @@
       <recent name="D:\One Drive\OneDrive - Universidade de Coimbra\Univerisdade\My Coding\Hackaton\ShiftAppens\ShiftAppens\static\assets" />
     </key>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="Python.backend">
+    <configuration name="backend" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="ShiftAppens" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/backend.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
     <configuration name="frontend" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="ShiftAppens" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -75,6 +116,7 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.backend" />
         <item itemvalue="Python.frontend" />
       </list>
     </recent_temporary>
@@ -91,6 +133,7 @@
       <updated>1618591830725</updated>
       <workItem from="1618591832383" duration="52000" />
       <workItem from="1618591886710" duration="9842000" />
+      <workItem from="1618646037392" duration="12717000" />
     </task>
     <servers />
   </component>
@@ -98,32 +141,54 @@
     <option name="version" value="2" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="192" y="87" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1618592686697">
-      <screen x="0" y="0" width="1474" height="864" />
+    <state x="2589" y="115" key="#backend" timestamp="1618646174986">
+      <screen x="1920" y="0" width="1920" height="1040" />
+    </state>
+    <state x="2589" y="115" key="#backend/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1618646174986" />
+    <state x="250" y="105" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1618659664118">
+      <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="192" y="87" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1474.864@0.0.1474.864" timestamp="1618592686697" />
+    <state x="250" y="105" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1618659664118" />
+    <state x="704" y="322" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1618660533666">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="704" y="322" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1618660533666" />
     <state x="517" y="174" key="FileChooserDialogImpl" timestamp="1618592629854">
       <screen x="0" y="0" width="1474" height="864" />
     </state>
     <state x="517" y="174" key="FileChooserDialogImpl/0.0.1474.864@0.0.1474.864" timestamp="1618592629854" />
-    <state width="1431" height="224" key="GridCell.Tab.0.bottom" timestamp="1618600492422">
-      <screen x="0" y="0" width="1474" height="864" />
+    <state width="1877" height="357" key="GridCell.Tab.0.bottom" timestamp="1618661887148">
+      <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state width="1431" height="224" key="GridCell.Tab.0.bottom/0.0.1474.864@0.0.1474.864" timestamp="1618600492422" />
-    <state width="1431" height="224" key="GridCell.Tab.0.center" timestamp="1618600492422">
-      <screen x="0" y="0" width="1474" height="864" />
+    <state width="1877" height="357" key="GridCell.Tab.0.bottom/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1618661887148" />
+    <state width="1877" height="357" key="GridCell.Tab.0.center" timestamp="1618661887148">
+      <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state width="1431" height="224" key="GridCell.Tab.0.center/0.0.1474.864@0.0.1474.864" timestamp="1618600492422" />
-    <state width="1431" height="224" key="GridCell.Tab.0.left" timestamp="1618600492421">
-      <screen x="0" y="0" width="1474" height="864" />
+    <state width="1877" height="357" key="GridCell.Tab.0.center/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1618661887148" />
+    <state width="1877" height="357" key="GridCell.Tab.0.left" timestamp="1618661887148">
+      <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state width="1431" height="224" key="GridCell.Tab.0.left/0.0.1474.864@0.0.1474.864" timestamp="1618600492421" />
-    <state width="1431" height="224" key="GridCell.Tab.0.right" timestamp="1618600492422">
-      <screen x="0" y="0" width="1474" height="864" />
+    <state width="1877" height="357" key="GridCell.Tab.0.left/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1618661887148" />
+    <state width="1877" height="357" key="GridCell.Tab.0.right" timestamp="1618661887148">
+      <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state width="1431" height="224" key="GridCell.Tab.0.right/0.0.1474.864@0.0.1474.864" timestamp="1618600492422" />
+    <state width="1877" height="357" key="GridCell.Tab.0.right/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1618661887148" />
+    <state x="461" y="165" key="SettingsEditor" timestamp="1618661174867">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="461" y="165" key="SettingsEditor/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1618661174867" />
+    <state x="667" y="119" width="585" height="801" key="find.popup" timestamp="1618659486150">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="667" y="119" width="585" height="801" key="find.popup/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1618659486150" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/ShiftAppens$backend.coverage" NAME="backend Coverage Results" MODIFIED="1618661373541" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/ShiftAppens$frontend.coverage" NAME="frontend Coverage Results" MODIFIED="1618600492396" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
 </project>
