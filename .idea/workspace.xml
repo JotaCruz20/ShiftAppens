@@ -2,23 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="883fe539-9211-4e0e-88e3-2016edaa9d16" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/podcasts.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/css/main.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/base.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/edit.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/indexSpotify.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/posts.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/ShiftAppens.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/ShiftAppens.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/MOODAI.pickle" beforeDir="false" afterPath="$PROJECT_DIR$/MOODAI.pickle" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/backend.py" beforeDir="false" afterPath="$PROJECT_DIR$/backend.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend.py" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/notebook.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/notebook.ipynb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/assets/clock.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/footer.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/logIn.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/podcasts.json" beforeDir="false" afterPath="$PROJECT_DIR$/podcasts.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -133,7 +121,7 @@
       <updated>1618591830725</updated>
       <workItem from="1618591832383" duration="52000" />
       <workItem from="1618591886710" duration="9842000" />
-      <workItem from="1618646037392" duration="12717000" />
+      <workItem from="1618646037392" duration="30370000" />
     </task>
     <servers />
   </component>
@@ -150,34 +138,34 @@
     </state>
     <state x="192" y="87" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1474.864@0.0.1474.864" timestamp="1618592686697" />
     <state x="250" y="105" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1618659664118" />
-    <state x="704" y="322" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1618660533666">
+    <state x="704" y="322" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1618678353472">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="704" y="322" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1618660533666" />
+    <state x="704" y="322" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1618678353472" />
     <state x="517" y="174" key="FileChooserDialogImpl" timestamp="1618592629854">
       <screen x="0" y="0" width="1474" height="864" />
     </state>
     <state x="517" y="174" key="FileChooserDialogImpl/0.0.1474.864@0.0.1474.864" timestamp="1618592629854" />
-    <state width="1877" height="357" key="GridCell.Tab.0.bottom" timestamp="1618661887148">
+    <state width="1877" height="290" key="GridCell.Tab.0.bottom" timestamp="1618681345848">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state width="1431" height="224" key="GridCell.Tab.0.bottom/0.0.1474.864@0.0.1474.864" timestamp="1618600492422" />
-    <state width="1877" height="357" key="GridCell.Tab.0.bottom/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1618661887148" />
-    <state width="1877" height="357" key="GridCell.Tab.0.center" timestamp="1618661887148">
+    <state width="1877" height="290" key="GridCell.Tab.0.bottom/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1618681345848" />
+    <state width="1877" height="290" key="GridCell.Tab.0.center" timestamp="1618681345848">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state width="1431" height="224" key="GridCell.Tab.0.center/0.0.1474.864@0.0.1474.864" timestamp="1618600492422" />
-    <state width="1877" height="357" key="GridCell.Tab.0.center/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1618661887148" />
-    <state width="1877" height="357" key="GridCell.Tab.0.left" timestamp="1618661887148">
+    <state width="1877" height="290" key="GridCell.Tab.0.center/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1618681345848" />
+    <state width="1877" height="290" key="GridCell.Tab.0.left" timestamp="1618681345848">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state width="1431" height="224" key="GridCell.Tab.0.left/0.0.1474.864@0.0.1474.864" timestamp="1618600492421" />
-    <state width="1877" height="357" key="GridCell.Tab.0.left/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1618661887148" />
-    <state width="1877" height="357" key="GridCell.Tab.0.right" timestamp="1618661887148">
+    <state width="1877" height="290" key="GridCell.Tab.0.left/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1618681345848" />
+    <state width="1877" height="290" key="GridCell.Tab.0.right" timestamp="1618681345848">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state width="1431" height="224" key="GridCell.Tab.0.right/0.0.1474.864@0.0.1474.864" timestamp="1618600492422" />
-    <state width="1877" height="357" key="GridCell.Tab.0.right/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1618661887148" />
+    <state width="1877" height="290" key="GridCell.Tab.0.right/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1618681345848" />
     <state x="461" y="165" key="SettingsEditor" timestamp="1618661174867">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -188,7 +176,7 @@
     <state x="667" y="119" width="585" height="801" key="find.popup/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1618659486150" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/ShiftAppens$backend.coverage" NAME="backend Coverage Results" MODIFIED="1618661373541" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/ShiftAppens$backend.coverage" NAME="backend Coverage Results" MODIFIED="1618680147629" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/ShiftAppens$frontend.coverage" NAME="frontend Coverage Results" MODIFIED="1618600492396" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
 </project>

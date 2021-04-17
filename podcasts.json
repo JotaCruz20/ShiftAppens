@@ -1,5 +1,10 @@
 {
-  "loneliness": [
-
-  ]
+  "Energetic": ["1qahXAacTk0QcOlzWHThhh", "4VlhsBbFVKX8bKqMwN5utG", "6fZXOzehJ9JtOyFjirF3qt", "4uPxHwRyvRC7ebz3gMxpk1"],
+  "Depressed": ["20xVIidgIKNL9rPVLMlRQS", "4m7U7kNne0iu35HK571Ui8", "1CfW319UkBMVhCXfei8huv", "0nMF1JL5tNJW7B0teIFWxV", "4uPxHwRyvRC7ebz3gMxpk1","6R6KA5U9J9AC09DOFvNQpf"],
+  "Sad": ["1CfW319UkBMVhCXfei8huv", "0nMF1JL5tNJW7B0teIFWxV", "0rgMTVJ9TWDWsut3R1c5L3", "4m7U7kNne0iu35HK571Ui8","6R6KA5U9J9AC09DOFvNQpf"],
+  "Calm":["0nMF1JL5tNJW7B0teIFWxV", "6fZXOzehJ9JtOyFjirF3qt", "0rgMTVJ9TWDWsut3R1c5L3", "3CPoJwrn09eF1bHFgeHZ0v"],
+  "Happy":["3u26tlz7A3WyWRtXliX9a9","4dq0wmiZlk58Eu0NcqgWei","2ydJ8ZAfuJhsAlvXUkrlsi"],
+  "Contentment":["5bb0v6T5YAyo5snd9nVi6F","088x3LuTZ1Oj9Z4IeEcW6L","1CfW319UkBMVhCXfei8huv"],
+  "Frantic":["4dq0wmiZlk58Eu0NcqgWei","20xVIidgIKNL9rPVLMlRQS","6R6KA5U9J9AC09DOFvNQpf"],
+  "Exuberant":["3u26tlz7A3WyWRtXliX9a9","4dq0wmiZlk58Eu0NcqgWei","2ydJ8ZAfuJhsAlvXUkrlsi","5UTjOFnLWvTKPcLhbPBgk0","0rgMTVJ9TWDWsut3R1c5L3"]
 }
