@@ -12,6 +12,11 @@
             <br>
             <div class="col-sm-8 mx-auto">
                 <h2>Emotional valence:</h2>
+                <small>Ask yourself how well you feel right now - do you feel good, does it feel good to be in your
+                        shoes
+                        right now?</small>
+                <br>
+                <br>
                 <form action="/loggedIn" method="POST">
                     <div class="slidecontainer">
                         <div class="inline" style="display: inline-block">Unpleasant</div>
@@ -29,19 +34,22 @@
                         }
                     </script>
                     <br>
-                    <small>Ask yourself how well you feel right now - do you feel good, does it feel good to be in your
-                        shoes
-                        right now?</small>
+
 
 
                     <br>
                     <br>
                     <br>
-                     <br>
                     <br>
-                    <br>
+
 
                     <h2>How much energy do you feel:</h2>
+                    <small>If you had to do some physical activity, that involved say running or using strength, how
+                        would
+                        that
+                        feel?</small>
+                    <br>
+                    <br>
                     <div class="slidecontainer">
                         <div class="inline" style="display: inline-block;margin-left: 53px">Dull</div>
                         <input type="range" name="energy" min="-5" max="5" value="0" class="slider" id="myRange2">
@@ -59,14 +67,9 @@
 
                     </script>
                     <br>
-                    <small>If you had to do some physical activity, that involved say running or using strength, how
-                        would
-                        that
-                        feel?</small>
+
                     <br>
                     <br>
-                    <br>
-                     <br>
                     <br>
                     <br>
 
@@ -90,7 +93,56 @@
                     }
 
                     // ]]></script>
+
+                    <br>
+                    <br>
+                    <br>
+
+
+                    <div class="row" style="display: inline-block">
+                        <h1>Type</h1>
+                        <div class="col-sm-10">
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios1"
+                                       value="podcast" checked>
+                                <label class="form-check-label" for="gridRadios1">
+                                    Podcasts
+                                </label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios2"
+                                       value="song">
+                                <label class="form-check-label" for="gridRadios2">
+                                    Music
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+
+                    <br>
+                    <br>
+                    <br>
+                    <h1>Time</h1>
+                    <small>How much time do you want your playlist to have?</small>
+                    <br>
+                    <br>
+                    <input class="col-xs-4" style="width: 10%" value="10" type="number" min="0" max="24" name="hour" id="hour"
+                           placeholder="hour"
+                           aria-label="hour">
+                    <small>:</small>
+                    <input class="col-xs-4" type="number" value="0" style="width: 10%" name="mins" min="0" max="60" id="mins"
+                           placeholder="mins"
+                           aria-label="mins">
+                    <br>
+
+
+                    <br>
+                    <br>
+                    <br>
+                    <br>
+
                     <input type="submit" value="Search" class="btn btn-primary" onclick="loading();">
+                    <br>
                 </form>
             </div>
             <br>
