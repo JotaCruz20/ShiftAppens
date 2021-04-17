@@ -1,6 +1,9 @@
 .row {
     padding: 0;
     margin: 0;
+    width: 60%;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .footer {
@@ -35,6 +38,8 @@ body {
     font-family: Gotham, serif;
     background-repeat: no-repeat;
     background-size: cover;
-    width: 100%;
+    width: 60%;
+    margin-left: auto;
+    margin-right: auto;
 }
 
