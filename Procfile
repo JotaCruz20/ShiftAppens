@@ -1,1 +1,1 @@
-web: gunicorn 0.0.0.0:$PORT frontend:app
+web: gunicorn frontend:app
