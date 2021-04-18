@@ -20,3 +20,4 @@ simplegeoip~=0.2.0
 requests~=2.25.1
 appdirs~=1.4.4
 Flask~=1.1.2
+gunicorn==20.0.4

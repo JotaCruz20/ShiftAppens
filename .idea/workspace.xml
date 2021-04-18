@@ -2,7 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="883fe539-9211-4e0e-88e3-2016edaa9d16" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/requirements.txt" beforeDir="false" afterPath="$PROJECT_DIR$/requirements.txt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -100,7 +99,7 @@
       <workItem from="1618591832383" duration="52000" />
       <workItem from="1618591886710" duration="48823000" />
       <workItem from="1618689947217" duration="5515000" />
-      <workItem from="1618697659409" duration="7937000" />
+      <workItem from="1618697659409" duration="8408000" />
     </task>
     <task id="LOCAL-00001" summary="start to front end">
       <created>1618602361802</created>
@@ -186,7 +185,14 @@
       <option name="project" value="LOCAL" />
       <updated>1618704968662</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="fix requirements.txt v6">
+      <created>1618706013413</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1618706013413</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -205,7 +211,8 @@
     <MESSAGE value="fix requirements.txt v3" />
     <MESSAGE value="fix requirements.txt v4" />
     <MESSAGE value="fix requirements.txt v5" />
-    <option name="LAST_COMMIT_MESSAGE" value="fix requirements.txt v5" />
+    <MESSAGE value="fix requirements.txt v6" />
+    <option name="LAST_COMMIT_MESSAGE" value="fix requirements.txt v6" />
   </component>
   <component name="WindowStateProjectService">
     <state x="669" y="115" key="#backend" timestamp="1618689957966">
@@ -220,10 +227,10 @@
       <screen x="0" y="0" width="1474" height="864" />
     </state>
     <state x="501" y="234" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1474.864@0.0.1474.864" timestamp="1618702555235" />
-    <state x="215" y="1" key="CommitChangelistDialog2" timestamp="1618704967022">
+    <state x="215" y="1" key="CommitChangelistDialog2" timestamp="1618706011792">
       <screen x="0" y="0" width="1474" height="864" />
     </state>
-    <state x="215" y="1" key="CommitChangelistDialog2/0.0.1474.864@0.0.1474.864" timestamp="1618704967022" />
+    <state x="215" y="1" key="CommitChangelistDialog2/0.0.1474.864@0.0.1474.864" timestamp="1618706011792" />
     <state x="280" y="1" key="CommitChangelistDialog2/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1618692872628" />
     <state x="517" y="174" key="FileChooserDialogImpl" timestamp="1618697698426">
       <screen x="0" y="0" width="1474" height="864" />
@@ -273,10 +280,10 @@
       <screen x="0" y="0" width="1474" height="864" />
     </state>
     <state x="246" y="77" key="SettingsEditor/0.0.1474.864@0.0.1474.864" timestamp="1618705757755" />
-    <state x="330" y="165" key="Vcs.Push.Dialog.v2" timestamp="1618704971161">
+    <state x="330" y="165" key="Vcs.Push.Dialog.v2" timestamp="1618706015758">
       <screen x="0" y="0" width="1474" height="864" />
     </state>
-    <state x="330" y="165" key="Vcs.Push.Dialog.v2/0.0.1474.864@0.0.1474.864" timestamp="1618704971161" />
+    <state x="330" y="165" key="Vcs.Push.Dialog.v2/0.0.1474.864@0.0.1474.864" timestamp="1618706015758" />
     <state x="430" y="199" key="Vcs.Push.Dialog.v2/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1618692881080" />
     <state width="744" height="439" key="XDebugger.FullValuePopup" timestamp="1618669657178">
       <screen x="0" y="0" width="1474" height="864" />
