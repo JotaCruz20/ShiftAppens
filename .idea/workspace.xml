@@ -2,7 +2,16 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="883fe539-9211-4e0e-88e3-2016edaa9d16" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/static/assets/favicon.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/done.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Procfile" beforeDir="false" afterPath="$PROJECT_DIR$/Procfile" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend.py" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/requirements.txt" beforeDir="false" afterPath="$PROJECT_DIR$/requirements.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/assets/clock_edited.svg" beforeDir="false" afterPath="$PROJECT_DIR$/static/assets/clock_edited.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/base.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/base.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/logIn.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/logIn.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -37,7 +46,7 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/frontend.py" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/static/assets" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
@@ -49,29 +58,30 @@
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
   </component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\One Drive\OneDrive - Universidade de Coimbra\Univerisdade\My Coding\Hackaton\ShiftAppens\ShiftAppens\static\assets" />
+      <recent name="D:\One Drive\OneDrive - Universidade de Coimbra\Univerisdade\My Coding\Hackaton\ShiftAppens\ShiftAppens\static" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="D:\One Drive\OneDrive - Universidade de Coimbra\Univerisdade\My Coding\Hackaton\ShiftAppens\ShiftAppens\static\assets" />
       <recent name="D:\One Drive\OneDrive - Universidade de Coimbra\Univerisdade\My Coding\Hackaton\ShiftAppens\ShiftAppens\static" />
     </key>
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="D:\One Drive\OneDrive - Universidade de Coimbra\Univerisdade\My Coding\Hackaton\ShiftAppens\ShiftAppens\static\assets" />
-    </key>
   </component>
   <component name="RunManager">
-    <configuration name="frontend" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+    <configuration name="flask_app" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="ShiftAppens" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
       <envs>
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
-      <option name="SDK_HOME" value="C:\Users\jotot\OneDrive - Universidade de Coimbra\Pasta\programas\FlaskTut\Scripts\python.exe" />
+      <option name="SDK_HOME" value="C:\Users\jotot\AppData\Local\Programs\Python\Python38\python.exe" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
       <option name="IS_MODULE_SDK" value="false" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/frontend.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/flask_app.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -82,7 +92,7 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Python.frontend" />
+        <item itemvalue="Python.flask_app" />
       </list>
     </recent_temporary>
   </component>
@@ -99,7 +109,8 @@
       <workItem from="1618591832383" duration="52000" />
       <workItem from="1618591886710" duration="48823000" />
       <workItem from="1618689947217" duration="5515000" />
-      <workItem from="1618697659409" duration="9284000" />
+      <workItem from="1618697659409" duration="9901000" />
+      <workItem from="1618736016015" duration="5513000" />
     </task>
     <task id="LOCAL-00001" summary="start to front end">
       <created>1618602361802</created>
@@ -206,7 +217,14 @@
       <option name="project" value="LOCAL" />
       <updated>1618734761652</updated>
     </task>
-    <option name="localTasksCounter" value="16" />
+    <task id="LOCAL-00016" summary="Fixing requirements.txt v8">
+      <created>1618735138468</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1618735138468</updated>
+    </task>
+    <option name="localTasksCounter" value="17" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -228,78 +246,79 @@
     <MESSAGE value="fix requirements.txt v6" />
     <MESSAGE value="fix requirements.txt v7" />
     <MESSAGE value="Procfile changed" />
-    <option name="LAST_COMMIT_MESSAGE" value="Procfile changed" />
+    <MESSAGE value="Fixing requirements.txt v8" />
+    <option name="LAST_COMMIT_MESSAGE" value="Fixing requirements.txt v8" />
   </component>
   <component name="WindowStateProjectService">
     <state x="669" y="115" key="#backend" timestamp="1618689957966">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="669" y="115" key="#backend/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1618689957966" />
-    <state x="192" y="87" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1618705697303">
+    <state x="192" y="87" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1618738427622">
       <screen x="0" y="0" width="1474" height="864" />
     </state>
-    <state x="192" y="87" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1474.864@0.0.1474.864" timestamp="1618705697303" />
+    <state x="192" y="87" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1474.864@0.0.1474.864" timestamp="1618738427622" />
     <state x="501" y="234" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1618702555235">
       <screen x="0" y="0" width="1474" height="864" />
     </state>
     <state x="501" y="234" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1474.864@0.0.1474.864" timestamp="1618702555235" />
-    <state x="215" y="1" key="CommitChangelistDialog2" timestamp="1618734760310">
+    <state x="215" y="1" key="CommitChangelistDialog2" timestamp="1618735137345">
       <screen x="0" y="0" width="1474" height="864" />
     </state>
-    <state x="215" y="1" key="CommitChangelistDialog2/0.0.1474.864@0.0.1474.864" timestamp="1618734760310" />
+    <state x="215" y="1" key="CommitChangelistDialog2/0.0.1474.864@0.0.1474.864" timestamp="1618735137345" />
     <state x="280" y="1" key="CommitChangelistDialog2/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1618692872628" />
-    <state x="517" y="174" key="FileChooserDialogImpl" timestamp="1618697698426">
+    <state x="517" y="174" key="FileChooserDialogImpl" timestamp="1618738348830">
       <screen x="0" y="0" width="1474" height="864" />
     </state>
-    <state x="517" y="174" key="FileChooserDialogImpl/0.0.1474.864@0.0.1474.864" timestamp="1618697698426" />
-    <state width="1431" height="260" key="GridCell.Tab.0.bottom" timestamp="1618703286499">
+    <state x="517" y="174" key="FileChooserDialogImpl/0.0.1474.864@0.0.1474.864" timestamp="1618738348830" />
+    <state width="1431" height="260" key="GridCell.Tab.0.bottom" timestamp="1618741575102">
       <screen x="0" y="0" width="1474" height="864" />
     </state>
-    <state width="1431" height="260" key="GridCell.Tab.0.bottom/0.0.1474.864@0.0.1474.864" timestamp="1618703286499" />
+    <state width="1431" height="260" key="GridCell.Tab.0.bottom/0.0.1474.864@0.0.1474.864" timestamp="1618741575102" />
     <state width="1877" height="290" key="GridCell.Tab.0.bottom/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1618692712706" />
     <state width="1877" height="290" key="GridCell.Tab.0.bottom/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1618694842390" />
-    <state width="1431" height="260" key="GridCell.Tab.0.center" timestamp="1618703286499">
+    <state width="1431" height="260" key="GridCell.Tab.0.center" timestamp="1618741575102">
       <screen x="0" y="0" width="1474" height="864" />
     </state>
-    <state width="1431" height="260" key="GridCell.Tab.0.center/0.0.1474.864@0.0.1474.864" timestamp="1618703286499" />
+    <state width="1431" height="260" key="GridCell.Tab.0.center/0.0.1474.864@0.0.1474.864" timestamp="1618741575102" />
     <state width="1877" height="290" key="GridCell.Tab.0.center/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1618692712705" />
     <state width="1877" height="290" key="GridCell.Tab.0.center/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1618694842390" />
-    <state width="1431" height="260" key="GridCell.Tab.0.left" timestamp="1618703286498">
+    <state width="1431" height="260" key="GridCell.Tab.0.left" timestamp="1618741575101">
       <screen x="0" y="0" width="1474" height="864" />
     </state>
-    <state width="1431" height="260" key="GridCell.Tab.0.left/0.0.1474.864@0.0.1474.864" timestamp="1618703286498" />
+    <state width="1431" height="260" key="GridCell.Tab.0.left/0.0.1474.864@0.0.1474.864" timestamp="1618741575101" />
     <state width="1877" height="290" key="GridCell.Tab.0.left/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1618692712705" />
     <state width="1877" height="290" key="GridCell.Tab.0.left/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1618694842390" />
-    <state width="1431" height="260" key="GridCell.Tab.0.right" timestamp="1618703286499">
+    <state width="1431" height="260" key="GridCell.Tab.0.right" timestamp="1618741575102">
       <screen x="0" y="0" width="1474" height="864" />
     </state>
-    <state width="1431" height="260" key="GridCell.Tab.0.right/0.0.1474.864@0.0.1474.864" timestamp="1618703286499" />
+    <state width="1431" height="260" key="GridCell.Tab.0.right/0.0.1474.864@0.0.1474.864" timestamp="1618741575102" />
     <state width="1877" height="290" key="GridCell.Tab.0.right/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1618692712705" />
     <state width="1877" height="290" key="GridCell.Tab.0.right/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1618694842390" />
-    <state width="1431" height="277" key="GridCell.Tab.1.bottom" timestamp="1618701793101">
+    <state width="1431" height="277" key="GridCell.Tab.1.bottom" timestamp="1618735725395">
       <screen x="0" y="0" width="1474" height="864" />
     </state>
-    <state width="1431" height="277" key="GridCell.Tab.1.bottom/0.0.1474.864@0.0.1474.864" timestamp="1618701793101" />
-    <state width="1431" height="277" key="GridCell.Tab.1.center" timestamp="1618701793101">
+    <state width="1431" height="277" key="GridCell.Tab.1.bottom/0.0.1474.864@0.0.1474.864" timestamp="1618735725395" />
+    <state width="1431" height="277" key="GridCell.Tab.1.center" timestamp="1618735725395">
       <screen x="0" y="0" width="1474" height="864" />
     </state>
-    <state width="1431" height="277" key="GridCell.Tab.1.center/0.0.1474.864@0.0.1474.864" timestamp="1618701793101" />
-    <state width="1431" height="277" key="GridCell.Tab.1.left" timestamp="1618701793101">
+    <state width="1431" height="277" key="GridCell.Tab.1.center/0.0.1474.864@0.0.1474.864" timestamp="1618735725395" />
+    <state width="1431" height="277" key="GridCell.Tab.1.left" timestamp="1618735725395">
       <screen x="0" y="0" width="1474" height="864" />
     </state>
-    <state width="1431" height="277" key="GridCell.Tab.1.left/0.0.1474.864@0.0.1474.864" timestamp="1618701793101" />
-    <state width="1431" height="277" key="GridCell.Tab.1.right" timestamp="1618701793101">
+    <state width="1431" height="277" key="GridCell.Tab.1.left/0.0.1474.864@0.0.1474.864" timestamp="1618735725395" />
+    <state width="1431" height="277" key="GridCell.Tab.1.right" timestamp="1618735725395">
       <screen x="0" y="0" width="1474" height="864" />
     </state>
-    <state width="1431" height="277" key="GridCell.Tab.1.right/0.0.1474.864@0.0.1474.864" timestamp="1618701793101" />
+    <state width="1431" height="277" key="GridCell.Tab.1.right/0.0.1474.864@0.0.1474.864" timestamp="1618735725395" />
     <state x="246" y="77" key="SettingsEditor" timestamp="1618705757755">
       <screen x="0" y="0" width="1474" height="864" />
     </state>
     <state x="246" y="77" key="SettingsEditor/0.0.1474.864@0.0.1474.864" timestamp="1618705757755" />
-    <state x="330" y="165" key="Vcs.Push.Dialog.v2" timestamp="1618734763320">
+    <state x="330" y="165" key="Vcs.Push.Dialog.v2" timestamp="1618735140527">
       <screen x="0" y="0" width="1474" height="864" />
     </state>
-    <state x="330" y="165" key="Vcs.Push.Dialog.v2/0.0.1474.864@0.0.1474.864" timestamp="1618734763320" />
+    <state x="330" y="165" key="Vcs.Push.Dialog.v2/0.0.1474.864@0.0.1474.864" timestamp="1618735140527" />
     <state x="430" y="199" key="Vcs.Push.Dialog.v2/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1618692881080" />
     <state width="744" height="439" key="XDebugger.FullValuePopup" timestamp="1618669657178">
       <screen x="0" y="0" width="1474" height="864" />
@@ -318,20 +337,9 @@
     </state>
     <state x="340" y="221" key="git4idea.merge.GitPullDialog/0.0.1474.864@0.0.1474.864" timestamp="1618602404079" />
   </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/frontend.py</url>
-          <line>59</line>
-          <option name="timeStamp" value="26" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
-  </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/ShiftAppens$backend.coverage" NAME="frontend Coverage Results" MODIFIED="1618702018874" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/ShiftAppens$frontend2.coverage" NAME="frontend2 Coverage Results" MODIFIED="1618698530479" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/ShiftAppens$frontend.coverage" NAME="frontend Coverage Results" MODIFIED="1618686587257" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/ShiftAppens$frontend.coverage" NAME="flask_app Coverage Results" MODIFIED="1618741575082" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
 </project>
